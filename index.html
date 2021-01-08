@@ -161,35 +161,52 @@
     </section>
 
     <section class="section-form" id="section-form">
-      <div class="row" id="form">
-        <h2>Vaša porudžbina</h2>
-      </div>
-      <div>
-        <div class="products">
-          <div class="product bottle">
-            <img
-              src="./images/DENN6496-copy.jpg"
-              alt="bottle"
-              class="productImg"
-            />
-            <p class="price">300 rsd / 0.33ml</p>
-            <input type="number" min="0" value="0" class="quantity" />
-            <a href="#" class="btn-add">Potvrdi</a>
-          </div>
-          <div class="product can">
-            <img
-              src="./images/DENN6496-copy.jpg"
-              alt="can"
-              class="productImg"
-            />
-            <p class="price">300 rsd / 0.33ml</p>
-            <input type="number" min="0" value="0" class="quantity" />
-            <a href="#" class="btn-add">Potvrdi</a>
+      <form
+        method="POST"
+        action="mailer.php"
+        id="beer-order"
+        class="contact-form"
+      >
+        <div class="row" id="form">
+          <h2>Vaša porudžbina</h2>
+        </div>
+        <div>
+          <div class="products">
+            <div class="product bottle">
+              <img
+                src="./images/DENN6496-copy.jpg"
+                alt="bottle"
+                class="productImg"
+              />
+              <p class="price">300 rsd / 0.33ml</p>
+              <input
+                type="number"
+                min="0"
+                value="0"
+                class="quantity"
+                name="bottle"
+              />
+              <a href="#" class="btn-add">Potvrdi</a>
+            </div>
+            <div class="product can">
+              <img
+                src="../images/DENN6496-copy.jpg"
+                alt="can"
+                class="productImg"
+              />
+              <p class="price">300 rsd / 0.33ml</p>
+              <input
+                type="number"
+                min="0"
+                value="0"
+                class="quantity"
+                name="can"
+              />
+              <a href="#" class="btn-add">Potvrdi</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <form method="post" id="beer-order" class="contact-form">
         <div class="row">
           <div class="col span-3-of-3">
             <input
@@ -286,7 +303,12 @@
             <label>&nbsp;</label>
           </div>
           <div class="col span-2-of-3">
-            <input type="submit" value="Poruči!" class="order-button" />
+            <input
+              type="submit"
+              name="submit"
+              value="Poruči!"
+              class="order-button"
+            />
           </div>
         </div>
       </form>
@@ -298,7 +320,7 @@
           <ul class="footer-nav">
             <li>
               <i class="ion-ios-email-outline"></i
-              ><a href="#">zocpivo@gmail.com</a>
+              ><a href="#">zocbeer@gmail.com</a>
             </li>
             <li><i class="ion-iphone"></i><a href="#">+381645555996</a></li>
             <li>
@@ -340,8 +362,8 @@
 
     <script src="/js/noframework.waypoints.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./js/smtp.js"></script>
+    <!-- <script src="./js/smtp.js"></script> -->
     <script src="./js/index.js"></script>
-    <script src="./js/mailer.js"></script>
+    <!-- <script src="./js/mailer.js"></script> -->
   </body>
 </html>
