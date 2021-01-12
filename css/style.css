@@ -139,7 +139,7 @@ input[type="submit"]:active {
 
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../images/Optimized-DENN6513.jpg");
+    url("../images/zoc-pivo-background.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -247,6 +247,14 @@ header {
   background-color: #fff;
 }
 
+.section-about p {
+  font-style: italic;
+  text-align: center;
+  font-size: 130%;
+  font-weight: 400;
+  word-wrap: normal;
+}
+
 /*-------------------------------*/
 /* SECTION BEERS */
 /*--------------------------------*/
@@ -324,9 +332,10 @@ header {
 
 .quantity {
   margin-top: 5px;
+  margin-left: 30px;
   border: 1px solid gray;
   border-radius: 6px;
-  width: 35px;
+  width: 50px;
   text-align: center;
   margin-right: 0.1em;
   color: #505050;
@@ -338,7 +347,7 @@ header {
   -webkit-appearance: none;
 }
 
-.btn-add:link,
+/* .btn-add:link,
 .btn-add:visited {
   display: inline-block;
   color: #fff;
@@ -358,7 +367,7 @@ header {
 .btn-add:active {
   background-color: #b48d0c;
   border: none;
-}
+} */
 
 .contact-form {
   width: 40%;
