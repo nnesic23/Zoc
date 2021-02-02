@@ -80,9 +80,9 @@
 
           <ul class="main-nav">
             <li><a href="#">Početna</a></li>
-            <li><a href="#section-form">Poruči pivo</a></li>
-            <li><a href="#section-about">O nama</a></li>
-            <li><a href="#footer">Kontakt</a></li>
+            <li><a href="#order">Poruči pivo</a></li>
+            <li><a href="#about">O nama</a></li>
+            <li><a href="#contact">Kontakt</a></li>
           </ul>
           <a class="mobile-nav-icon"><i class="ion-navicon-round"></i></a>
         </div>
@@ -90,11 +90,11 @@
 
       <div class="main">
         <h1>Ukus nove pobede, pivo Žoc!</h1>
-        <a href="#section-form" class="btn btn-full">Poručite odmah</a>
+        <a href="#order" class="btn btn-full">Poručite odmah</a>
       </div>
     </header>
 
-    <section class="section-about" id="section-about">
+    <section class="section-about" id="about">
       <div class="row">
         <div class="col span-3-of-3">
           <p>
@@ -172,7 +172,7 @@
       </ul>
     </section>
 
-    <section class="section-form" id="section-form">
+    <section class="section-form" id="order">
       <form
         method="POST"
         action="mailer.php"
@@ -275,8 +275,20 @@
             <input
               type="text"
               name="address"
-              placeholder="Vaša adresa"
+              placeholder="Ulica i broj"
               id="address"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col span-3-of-3">
+            <input
+              type="text"
+              name="apartment"
+              placeholder="Sprat/Stan"
+              id="apartment"
               required
             />
           </div>
@@ -306,15 +318,6 @@
 
         <div class="row">
           <div class="col span-1-of-3">
-            <label for="promo">Želim da primam obaveštenja o promocijama</label>
-          </div>
-          <div class="col span-2-of-3">
-            <input type="checkbox" name="promo" id="promo" checked /> Da
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col span-1-of-3">
             <label>&nbsp;</label>
           </div>
           <div class="col span-2-of-3">
@@ -329,20 +332,15 @@
       </form>
     </section>
 
-    <footer id="footer">
+    <footer id="contact">
       <div class="row">
         <div class="col span-1-of-2">
           <ul class="footer-nav">
+            <li><i class="ion-ios-email-outline"></i> info@zocpivo.com</li>
+            <li><i class="ion-iphone"></i> +381606969260</li>
             <li>
-              <i class="ion-ios-email-outline"></i
-              ><a href="#">zocbeer@gmail.com</a>
-            </li>
-            <li><i class="ion-iphone"></i><a href="#">+381645555996</a></li>
-            <li>
-              <i class="ion-ios-location-outline"></i
-              ><a href="https://goo.gl/maps/qc3XPkqnTgWJonJy7" target="_blank"
-                >Miloša Obilića 42, Čačak</a
-              >
+              <i class="ion-ios-location-outline"></i>
+              Miloša Obilića 42, Čačak
             </li>
           </ul>
         </div>
@@ -371,7 +369,7 @@
       </div>
 
       <div class="row">
-        <p>Copyright &copy; 2020. Sva autorska prava zadržana.</p>
+        <p>Copyright &copy; 2021. Sva autorska prava zadržana.</p>
       </div>
     </footer>
 

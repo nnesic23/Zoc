@@ -1,5 +1,5 @@
 <?php
-define('EMAIL', 'zocbeer@gmail.com');
-define('PASS', 'zocpivo032');
+define('EMAIL', 'zocpivo@zocpivo.com');
+define('PASS', 'cacakzocpivocacak');
 
 ?>

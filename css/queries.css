@@ -1,12 +1,12 @@
-/* Big tablets to 1200px: from 1024 to 1020px */
+/* Big tablets to 1200px: from 1024 to 1200px */
 @media only screen and (max-width: 1200px) {
   .main {
     width: 100%;
-    padding: 0 2%;
+    padding: 0 5%;
   }
 
   .row {
-    padding: 0 2%;
+    padding: 0 5%;
   }
 
   .sticky .mobile-nav-icon {
@@ -51,10 +51,10 @@
   }
 }
 
-/* Small phones to small tablets: from 481px to 767px */
-@media only screen and (max-width: 767px) {
+/* Small phones to small tablets: from 481px to 790px */
+@media only screen and (max-width: 790px) {
   body {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   section {
@@ -62,12 +62,16 @@
   }
 
   .row {
-    padding: 0 4%;
+    padding: 0 8%;
+  }
+
+  .main {
+    padding: 0 8%;
   }
 
   .col {
     width: 100%;
-    margin: 0 0 4% 0;
+    margin: 0 0 1% 0;
   }
 
   .section-about p {
@@ -110,8 +114,8 @@
   }
 
   .logo {
-    width: 120px;
-    height: 70px;
+    width: 150px;
+    height: 80px;
   }
 
   .sticky .main-nav li a:link,
@@ -158,7 +162,7 @@
   }
 
   .social-links {
-    margin-right: 45%;
+    margin-right: 35%;
   }
 
   .footer-nav {
@@ -169,11 +173,11 @@
 /* Small phones: from 0 to 480px */
 @media only screen and (max-width: 480px) {
   section {
-    padding: 25px 0;
+    padding: 15px 0;
   }
 
   .logo {
-    margin-left: 15px;
+    margin-left: -30px;
   }
 
   .sticky .logo {
@@ -238,10 +242,10 @@
   }
 
   .social-links {
-    margin-right: 40%;
+    margin-right: 28%;
   }
 
   .footer-nav {
-    margin-left: 20%;
+    margin-left: 15%;
   }
 }
