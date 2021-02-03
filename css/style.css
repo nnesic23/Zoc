@@ -90,7 +90,8 @@ a:active {
 
 .btn:link,
 .btn:visited,
-input[type="submit"] {
+input[type="submit"],
+input[type="button"] {
   display: inline-block;
   padding: 10px 30px;
   font-weight: 400;
@@ -101,7 +102,8 @@ input[type="submit"] {
 
 .btn-full:link,
 .btn-full:visited,
-input[type="submit"] {
+input[type="submit"],
+input[type="button"] {
   background-color: #9c7b0a;
   border: 1px solid #9c7b0a;
   color: #fff;
@@ -111,7 +113,9 @@ input[type="submit"] {
 .btn:hover,
 .btn:active,
 input[type="submit"]:hover,
-input[type="submit"]:active {
+input[type="submit"]:active,
+input[type="button"]:hover,
+input[type="button"]:active {
   background-color: #b48d0c;
 }
 
@@ -397,6 +401,10 @@ input[type="checkbox"] {
   margin: 10px 5px 10px 0;
 }
 
+input[type="button"] {
+  margin-bottom: 20px;
+}
+
 .order-button {
   display: flex;
   justify-content: center;
@@ -404,6 +412,19 @@ input[type="checkbox"] {
 
 *:focus {
   outline: none;
+}
+
+.formMessageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#formMessage {
+  font-size: 30px;
+  border-radius: 4px;
+  padding: 5px 15px;
 }
 
 /*-------------------------------*/

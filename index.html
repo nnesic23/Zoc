@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="/css/grid.css" />
     <link rel="stylesheet" type="text/css" href="/css/queries.css" />
     <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/css/jquery.toast.min.css" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
@@ -183,7 +184,10 @@
           <h2>Vaša porudžbina</h2>
         </div>
         <div>
-          <p class="price">5.5% vol, IBU: 32</p>
+          <p class="price">
+            5.5% vol, IBU: 32 <br />
+            Pale Ale
+          </p>
           <div class="products">
             <div class="product bottle">
               <img
@@ -191,7 +195,7 @@
                 alt="zoc-pivo"
                 class="productImg"
               />
-              <p class="price">300 rsd / 0.33ml</p>
+              <p class="price">0.33 ml / 300 rsd</p>
               <input
                 type="number"
                 min="0"
@@ -208,7 +212,7 @@
                 alt="zoc-pivo"
                 class="productImg"
               />
-              <p class="price">300 rsd / 0.33ml</p>
+              <p class="price">0.33 ml / 300 rsd</p>
               <input
                 type="number"
                 min="0"
@@ -227,7 +231,7 @@
             <input
               type="text"
               name="name"
-              placeholder="Vaše ime"
+              placeholder="Ime"
               id="name"
               required
             />
@@ -239,7 +243,7 @@
             <input
               type="text"
               name="lastname"
-              placeholder="Vaše prezime"
+              placeholder="Prezime"
               id="lastname"
               required
             />
@@ -251,7 +255,7 @@
             <input
               type="email"
               name="email"
-              placeholder="Vaš email"
+              placeholder="Email adresa"
               id="email"
               required
             />
@@ -263,8 +267,20 @@
             <input
               type="text"
               name="city"
-              placeholder="Grad"
+              placeholder="Mesto"
               id="city"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col span-3-of-3">
+            <input
+              type="text"
+              name="zipcode"
+              placeholder="Poštanski broj"
+              id="zipcode"
               required
             />
           </div>
@@ -289,7 +305,6 @@
               name="apartment"
               placeholder="Sprat/Stan"
               id="apartment"
-              required
             />
           </div>
         </div>
@@ -299,7 +314,7 @@
             <input
               type="text"
               name="phone-number"
-              placeholder="Vaš broj telefona"
+              placeholder="Broj telefona"
               id="phone-number"
               required
             />
@@ -316,18 +331,15 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col span-1-of-3">
-            <label>&nbsp;</label>
-          </div>
-          <div class="col span-2-of-3">
-            <input
-              type="submit"
-              name="submit"
-              value="Poruči!"
-              class="order-button"
-            />
-          </div>
+        <div class="formMessageContainer">
+          <input
+            type="button"
+            name="submit"
+            value="Poruči!"
+            class="order-button"
+            id="formButton"
+          />
+          <p id="formMessage"></p>
         </div>
       </form>
     </section>
@@ -375,8 +387,7 @@
 
     <script src="/js/noframework.waypoints.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- <script src="./js/smtp.js"></script> -->
+    <script src="./js/jquery.toast.min.js"></script>
     <script src="./js/index.js"></script>
-    <!-- <script src="./js/mailer.js"></script> -->
   </body>
 </html>

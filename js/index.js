@@ -29,3 +29,55 @@ $(document).ready(function () {
     }
   });
 });
+
+/*** EMAIL DATA ***/
+
+$(document).ready(function () {
+  $("#formButton").on("click", function (e) {
+    e.preventDefault;
+    var formdata = $("#beer-order").serialize();
+    $.ajax({
+      url: "mailer.php",
+      type: "post",
+      dataType: "json",
+      data: {
+        formdata: formdata,
+      },
+    })
+      .done(function (data) {
+        if (data.success === false) {
+          $.toast({
+            loader: false,
+            icon: "error",
+            text: data.message,
+            position: "bottom-center",
+            transition: "slide",
+            bgColor: "#bb2123da",
+            textColor: "#fff",
+            stack: false,
+            hideAfter: 5000,
+          });
+        }
+
+        if (data.success === true) {
+          $.toast({
+            loader: false,
+            icon: "success",
+            text: data.message,
+            position: "bottom-center",
+            transition: "slide",
+            bgColor: "#22bb34de",
+            textColor: "#fff",
+            stack: false,
+            hideAfter: 5000,
+          });
+          setTimeout(() => {
+            location.reload();
+          }, 5000);
+        }
+      })
+      .fail(function (err) {
+        console.log(err);
+      });
+  });
+});
