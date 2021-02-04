@@ -43,10 +43,9 @@ section {
 /* ----- HEADINGS ----- */
 
 h1 {
-  margin-top: 0;
   margin-bottom: 20px;
   color: #fff;
-  font-size: 240%;
+  font-size: 260%;
   word-spacing: 3px;
   letter-spacing: 1px;
 }
@@ -139,7 +138,6 @@ input[type="button"]:active {
 /*-------------------------------*/
 /* HEADER */
 /*--------------------------------*/
-
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../images/zoc-pivo-background.jpg");
@@ -149,24 +147,34 @@ header {
   height: 100vh;
 }
 
+nav {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 300px;
+}
+
+main {
+  padding: 25vh 0 0 300px;
+}
+
 .logo {
   height: 100px;
   width: 170px;
-  float: left;
-  margin-top: 20px;
-  margin-left: -40px;
+  margin-left: -25px;
 }
 
 /* ---- Main nav ---- */
 
 .main-nav {
-  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
-  margin-top: 55px;
 }
 
 .main-nav li {
-  display: inline-block;
+  display: flex;
   margin-left: 40px;
 }
 
@@ -186,17 +194,7 @@ header {
   border-bottom: 1px solid #9c7b0a;
 }
 
-.main {
-  position: absolute;
-  width: 1140px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .mobile-nav-icon {
-  float: right;
-  margin-top: 30px;
   cursor: pointer;
   display: none;
   text-decoration: none;
@@ -216,11 +214,15 @@ header {
 /* ---- Sticky nav ---- */
 
 .sticky {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
+  padding: 0 300px;
+  margin: 0;
   top: 0;
-  left: 0;
   width: 100%;
-  background-color: rgba(51, 51, 51, 0.7);
+  background-color: #354e5bdc;
   box-shadow: 0 2px 2px #efefef;
   z-index: 9999;
 }
@@ -229,7 +231,6 @@ header {
 .sticky .main-nav li a:visited {
   color: #fff;
   border: none;
-  padding: 14px 0px;
   font-size: 80%;
 }
 
@@ -239,13 +240,8 @@ header {
 }
 
 .sticky .logo {
-  height: 50px;
+  height: 70px;
   width: auto;
-  margin-top: 4px;
-}
-
-.sticky .main-nav {
-  margin-top: 15px;
 }
 
 /*-------------------------------*/
@@ -432,9 +428,22 @@ input[type="button"] {
 /*--------------------------------*/
 
 footer {
-  background-color: #333;
+  background-color: #354e5b;
   padding: 50px;
   font-size: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 200px;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-nav {
@@ -449,14 +458,10 @@ footer {
   font-size: 120%;
 }
 
-.footer-nav li a {
-  margin-left: 10px;
-}
-
 .social-links {
   list-style: none;
   float: right;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .social-links li {
@@ -475,7 +480,7 @@ footer {
 .social-links li a:visited {
   text-decoration: none;
   border: none;
-  color: #888;
+  color: rgba(255, 255, 255, 0.678);
   transition: color 0.2s;
 }
 
@@ -496,20 +501,22 @@ footer {
   transition: color 0.2s;
 }
 
-.ion-social-facebook:hover {
-  color: #3b5999;
+.ion-social-facebook:hover,
+.ion-social-googleplus:hover,
+.ion-social-instagram:hover {
+  color: #9c7b0a;
 }
 
-.ion-social-googleplus:hover {
+/* .ion-social-googleplus:hover {
   color: #dd4b39;
 }
 
 .ion-social-instagram:hover {
   color: #517fa4;
-}
+} */
 
 footer p {
-  color: #888;
+  color: rgb(156, 156, 156);
   text-align: center;
   font-size: 100%;
   margin-top: 20px;

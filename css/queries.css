@@ -1,3 +1,31 @@
+@media only screen and (max-width: 1660px) {
+  nav {
+    margin: 0 200px;
+  }
+
+  main {
+    padding: 25vh 0 0 200px;
+  }
+
+  .sticky {
+    padding: 0 200px;
+  }
+}
+
+@media only screen and (max-width: 1290px) {
+  nav {
+    margin: 0 100px;
+  }
+
+  main {
+    padding: 25vh 0 0 100px;
+  }
+
+  .sticky {
+    padding: 0 100px;
+  }
+}
+
 /* Big tablets to 1200px: from 1024 to 1200px */
 @media only screen and (max-width: 1200px) {
   .main {
@@ -12,24 +40,16 @@
   .sticky .mobile-nav-icon {
     margin-left: 90px;
   }
-
-  .sticky .logo {
-    margin: 0 10px;
-  }
 }
 
-/* Small tablet to big tablet: from 768px to 1023px */
-@media only screen and (max-width: 1023px) {
+/* Small tablet to big tablet: from 950px to 1023px */
+@media only screen and (max-width: 950px) {
   body {
     font-size: 18px;
   }
 
   section {
     padding: 60px 0;
-  }
-
-  .sticky .logo {
-    margin: 0 10px;
   }
 
   .section-about p {
@@ -51,6 +71,16 @@
   }
 }
 
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 100px;
+}
+
+.copyright {
+  margin-top: 50px;
+}
+
 /* Small phones to small tablets: from 481px to 790px */
 @media only screen and (max-width: 790px) {
   body {
@@ -65,8 +95,12 @@
     padding: 0 8%;
   }
 
-  .main {
-    padding: 0 8%;
+  nav {
+    margin: 0 50px;
+  }
+
+  main {
+    padding: 25vh 0 0 50px;
   }
 
   .col {
@@ -84,8 +118,9 @@
   }
 
   .mobile-nav-icon {
-    display: inline-block;
-    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .main-nav {
@@ -128,13 +163,8 @@
     margin-left: 35px;
   }
 
-  .sticky .logo {
-    margin-top: 5px;
-    margin-left: 15px;
-  }
-
-  .sticky .mobile-nav-icon {
-    margin-top: 15px;
+  .sticky {
+    padding: 0 50px;
   }
 
   h1 {
@@ -161,12 +191,13 @@
     margin-left: 32%;
   }
 
-  .social-links {
-    margin-right: 35%;
-  }
-
-  .footer-nav {
-    margin-left: 25%;
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 20px;
   }
 }
 
@@ -176,28 +207,12 @@
     padding: 15px 0;
   }
 
-  .logo {
-    margin-left: -30px;
+  nav {
+    margin: 0 30px;
   }
 
-  .sticky .logo {
-    margin-top: 15px;
-    margin-left: 10px;
-  }
-
-  .mobile-nav-icon {
-    padding-top: 30px;
-    padding-right: 20px;
-  }
-
-  .sticky .mobile-nav-icon {
-    padding-top: 5px;
-    padding-bottom: 20px;
-  }
-
-  .mobile-nav-icon {
-    margin-top: 10px;
-    margin-right: 15px;
+  main {
+    padding: 25vh 0 0 30px;
   }
 
   .main {
@@ -205,7 +220,6 @@
   }
 
   .main-nav {
-    margin-left: 2px;
     font-size: 150%;
   }
 
@@ -222,8 +236,8 @@
     width: 80%;
   }
 
-  .quantity {
-    margin-left: 15px;
+  .product {
+    margin: 20px 5px;
   }
 
   .btn-add:link,
@@ -241,11 +255,12 @@
     grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
   }
 
-  .social-links {
-    margin-right: 28%;
-  }
-
-  .footer-nav {
-    margin-left: 15%;
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 20px;
   }
 }

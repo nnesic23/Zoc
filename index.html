@@ -15,10 +15,10 @@
     <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="/css/grid.css" />
-    <link rel="stylesheet" type="text/css" href="/css/queries.css" />
     <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/queries.css" />
     <link rel="stylesheet" type="text/css" href="/css/jquery.toast.min.css" />
 
     <link
@@ -72,27 +72,23 @@
   <body>
     <header>
       <nav>
-        <div class="row">
-          <img
-            src="./images/zoc-pivo-logo.png"
-            alt="zoc-pivo-logo"
-            class="logo"
-          />
-
-          <ul class="main-nav">
-            <li><a href="#">Početna</a></li>
-            <li><a href="#order">Poruči pivo</a></li>
-            <li><a href="#about">O nama</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-          </ul>
-          <a class="mobile-nav-icon"><i class="ion-navicon-round"></i></a>
-        </div>
+        <img
+          src="./images/zoc-pivo-logo.png"
+          alt="zoc-pivo-logo"
+          class="logo"
+        />
+        <ul class="main-nav">
+          <li><a href="#">Početna</a></li>
+          <li><a href="#order">Poruči pivo</a></li>
+          <li><a href="#about">O nama</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+        <a class="mobile-nav-icon"><i class="ion-navicon-round"></i></a>
       </nav>
-
-      <div class="main">
+      <main>
         <h1>Ukus nove pobede, pivo Žoc!</h1>
         <a href="#order" class="btn btn-full">Poručite odmah</a>
-      </div>
+      </main>
     </header>
 
     <section class="section-about" id="about">
@@ -345,19 +341,16 @@
     </section>
 
     <footer id="contact">
-      <div class="row">
-        <div class="col span-1-of-2">
-          <ul class="footer-nav">
-            <li><i class="ion-ios-email-outline"></i> info@zocpivo.com</li>
-            <li><i class="ion-iphone"></i> +381606969260</li>
-            <li>
-              <i class="ion-ios-location-outline"></i>
-              Miloša Obilića 42, Čačak
-            </li>
-          </ul>
-        </div>
-
-        <div class="col span-1-of-2">
+      <div class="contact-details">
+        <ul class="footer-nav">
+          <li><i class="ion-ios-email-outline"></i> info@zocpivo.com</li>
+          <li><i class="ion-iphone"></i> +381606969260</li>
+          <li>
+            <i class="ion-ios-location-outline"></i>
+            Miloša Obilića 42, Čačak
+          </li>
+        </ul>
+        <div class="social-links-container">
           <ul class="social-links">
             <li>
               <a href="https://www.facebook.com/" target="_blank"
@@ -380,7 +373,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="copyright">
         <p>Copyright &copy; 2021. Sva autorska prava zadržana.</p>
       </div>
     </footer>
