@@ -48,6 +48,7 @@ h1 {
   font-size: 260%;
   word-spacing: 3px;
   letter-spacing: 1px;
+  animation: slide 2s ease-in;
 }
 
 h2 {
@@ -67,6 +68,7 @@ h2:after,
   width: 100px;
   margin: 0 auto;
   margin-top: 30px;
+  animation: slide 3s ease-in;
 }
 
 /* ----- LINKS ----- */
@@ -75,8 +77,9 @@ a:link,
 a:visited {
   color: #9c7b0a;
   text-decoration: none;
+  border: 1px solid transparent;
   padding-bottom: 1px;
-  transition: color 0.2s;
+  transition: color 0.2s, border-bottom 0.2s;
 }
 
 a:hover,
@@ -164,6 +167,10 @@ main {
   margin-left: -25px;
 }
 
+.order-btn {
+  animation: slide 2s ease-in;
+}
+
 /* ---- Main nav ---- */
 
 .main-nav {
@@ -186,12 +193,13 @@ main {
   text-transform: uppercase;
   font-size: 110%;
   font-weight: 400;
-  transition: border-bottom 0.2s, color 0.2s;
+  border-bottom: 2px solid #9c7b0a transparent;
+  transition: border-bottom 0.2s;
 }
 
 .main-nav ul li a:hover,
 .main-nav ul li a:active {
-  border-bottom: 1px solid #9c7b0a;
+  border-bottom: 2px solid #9c7b0a;
 }
 
 .mobile-nav-icon {
@@ -214,17 +222,29 @@ main {
 /* ---- Sticky nav ---- */
 
 .sticky {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
-  padding: 0 300px;
   margin: 0;
-  top: 0;
+  padding: 0 300px;
   width: 100%;
   background-color: #354e5bdc;
   box-shadow: 0 2px 2px #efefef;
   z-index: 9999;
+}
+
+.sticky .main-nav {
+  margin: 20px 0px 20px 20px;
+}
+
+.mobile-nav-icon {
+  align-self: center;
+  margin: 6px -20px 0px 0px;
+}
+.mobile-nav-icon i {
+  font-size: 140%;
+}
+
+.sticky .logo {
+  margin-left: -50px;
 }
 
 .sticky .main-nav li a:link,
@@ -250,6 +270,7 @@ main {
 
 .section-about {
   background-color: #fff;
+  text-align: center;
 }
 
 .section-about p {
@@ -258,6 +279,17 @@ main {
   font-size: 130%;
   font-weight: 400;
   word-wrap: normal;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 
 /*-------------------------------*/

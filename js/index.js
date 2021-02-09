@@ -3,10 +3,27 @@ const waypoint = new Waypoint({
   element: document.querySelector(".section-about"),
   handler: function (direction) {
     const nav = document.querySelector("nav");
+    const text = document.querySelector(".about-first");
     if (direction === "down") {
       nav.classList.add("sticky");
+      text.style.animation = "slide 2s ease";
     } else {
       nav.classList.remove("sticky");
+    }
+  },
+  offset: "60px",
+});
+
+const waypoint2 = new Waypoint({
+  element: document.querySelector("main"),
+  handler: function (direction) {
+    const text1 = document.querySelector(".about-first");
+    const text2 = document.querySelector(".about-second");
+    const text3 = document.querySelector(".about-third");
+    if (direction === "down") {
+      text1.style.animation = "slide 2s ease-in";
+      text2.style.animation = "slide 3s ease-in";
+      text3.style.animation = "slide 4s ease-in";
     }
   },
   offset: "60px",
