@@ -8,7 +8,7 @@ $params = array();
 parse_str($_POST['formdata'], $params);
 $_POST = $params;
 
-if (isset($_POST['email']) && $_POST['email'] != '' && $_POST["bottle"] != 0 || $_POST["can"] != 0) {
+if (isset($_POST['email']) && $_POST['email'] != '' && $_POST["bottle"] != 0 || $_POST["can"] != 0 && $_POST['phone-number'] != '') {
 
     if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         //inputs
@@ -30,7 +30,7 @@ if (isset($_POST['email']) && $_POST['email'] != '' && $_POST["bottle"] != 0 || 
         $can = $_POST['can'];  
 
         //email body
-        $body = "<h1>Nova porudžbina, br. $orderNum</h1>
+        $body = "<h1>Nova porudžbina</h1>
                 <hr />
                 <p>Ime i prezime: $name $lastname</p>
                 <p>Email adresa: $email</p>
@@ -81,8 +81,8 @@ if (isset($_POST['email']) && $_POST['email'] != '' && $_POST["bottle"] != 0 || 
                     "message" => "Uspešno ste poručili! Hvala na poverenju!"
                 ]);
                 exit();
-            
-            }
+             
+            } 
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
@@ -100,7 +100,7 @@ if (isset($_POST['email']) && $_POST['email'] != '' && $_POST["bottle"] != 0 || 
     ]);
     exit();
 }
-
+ 
 
 function sendConfirmationMail($email, $name, $subject) {
     $mail = new PHPMailer;
@@ -123,7 +123,6 @@ function sendConfirmationMail($email, $name, $subject) {
         <p>Vaša porudžbina je zavedena.</p>
         <p>Hvala na poverenju!</p>
         <hr />
-        <p><strong>S poštovanjem,<strong/></p>
         <p><strong>Žoc Pivo</strong></p>
         <p><strong>Web: zocpivo.com</strong></p>
         <p><strong>Email: info@zocpivo.com</strong></p>

@@ -1,0 +1,32 @@
+input[type='text'],
+input[type='email'] {
+  font-size: 1.4em;
+  font-family: 'Ubuntu', sans-serif;
+  color: #354e5b;
+  padding: 5px 0 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  border: 1px solid #354e5b;
+  &::placeholder {
+    font-family: 'Ubuntu', sans-serif;
+  }
+}
+
+input:required:focus {
+    border: 1px solid #ff0000;
+}
+
+textarea {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.4em !important;
+  color: #354e5b;
+  height: 100px;
+  padding: 10px !important;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  border: 1px solid #354e5b;
+  resize: none;
+  &::placeholder {
+    font-family: 'Ubuntu', sans-serif;
+  }
+}
