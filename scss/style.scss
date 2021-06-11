@@ -340,6 +340,7 @@
   @include breakpoint(phone) {
     left: 0;
   }
+  display: none;
 }
 
 .order__promo-price-img {
